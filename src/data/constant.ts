@@ -1,0 +1,168 @@
+export const NAV_ITEMS: Array<INavItem> = [
+  {
+    label: "Home",
+    page: "hero",
+  },
+  {
+    label: "Projects",
+    page: "projects",
+  },
+  {
+    label: "Skills",
+    page: "skills",
+  },
+  {
+    label: "Contact",
+    page: "contact",
+  },
+];
+
+export const SKILLS: Array<ISkillItem> = [
+  { id: 1, name: "HTML" },
+  { id: 2, name: "CSS/SCSS" },
+  { id: 3, name: "Javascript" },
+  { id: 4, name: "Typescript" },
+  { id: 5, name: "GraphQL" },
+  { id: 6, name: "React" },
+  { id: 7, name: "Next.js" },
+  { id: 8, name: "React Native" },
+  { id: 9, name: "Redux" },
+  { id: 10, name: "TailwindCSS" },
+  { id: 11, name: "Express.js" },
+  { id: 12, name: "Nest.js" },
+  { id: 13, name: "Firebase" },
+  { id: 14, name: "Mongoose" },
+  { id: 15, name: "Prisma" },
+  { id: 16, name: "Sequelize" },
+  { id: 17, name: "TypeORM" },
+  { id: 18, name: "MongoDB" },
+  { id: 19, name: "PostgreSQL" },
+  { id: 20, name: "Git" },
+  { id: 21, name: "Postman" },
+  { id: 22, name: "REST API" },
+  { id: 23, name: "Swagger" },
+];
+
+export const LINKS = {
+  // linkCv:
+};
+
+export const PROJECTS: Array<IProjectItem> = [
+  {
+    name: "Social media",
+    description:
+      "Fullstack social media application written with MERN stack, Redux toolkit, TailwindCSS",
+    techStack: [
+      "Typescript",
+      "React",
+      "Redux tookit",
+      "TailwindCSS",
+      "Formik",
+      "Yup",
+      "Express",
+      "Mongoose",
+      "MongoDB",
+      "Multer",
+      "Bcrypt",
+      "JWT",
+    ],
+    image: "/projects/project-social.png",
+    isImageDark: true,
+    github: "https://github.com/vasylmiskiv/social-media",
+    link: "https://vmiskiv-fssocial-app.onrender.com",
+  },
+  {
+    name: "PromptAI",
+    description:
+      "Fullstack application with ChatGPT prompt saver and authorization",
+    techStack: [
+      "Typescript",
+      "Next.js",
+      "NextAuth",
+      "TailwindCSS",
+      "Mongoose",
+      "MongoDB",
+    ],
+    image: "/projects/project-promptai.png",
+    isImageDark: false,
+    github: "https://github.com/vasylmiskiv/next13-fs-ai-app",
+    link: "https://vmiskiv-promptai.vercel.app",
+  },
+  {
+    name: "Ecommerce store",
+    description:
+      "Fullstack eCommerce platform built with the MERN stack & Redux with admin tool",
+    techStack: [
+      "Typescript",
+      "React",
+      "Redux",
+      "Redux thunk",
+      "React-bootstrap",
+      "TailwindCSS",
+      "Express",
+      "Mongoose",
+      "MongoDB",
+      "Multer",
+      "Bcrypt",
+      "JWT",
+    ],
+    image: "/projects/project-ecommerce.png",
+    isImageDark: false,
+    github: "https://github.com/vasylmiskiv/ecommerce-client",
+    link: "https://vmiskivecommerce.vercel.app",
+  },
+  {
+    name: "FinanceAI",
+    description:
+      "Fullstack dashboard application built with the MERN stack & Redux toolkit",
+    techStack: [
+      "Typescript",
+      "React",
+      "Redux",
+      "Redux toolkit",
+      "MaterialUI",
+      "Express",
+      "Mongoose",
+      "MongoDB",
+      "Multer",
+    ],
+    image: "/projects/project-financeai.png",
+    isImageDark: true,
+    github: "https://github.com/vasylmiskiv/financeAI",
+    link: "https://vmiskiv-finance-app.onrender.com",
+  },
+  {
+    name: "ChatGPT",
+    description: "ChatGPT application with OAuth, Firebase, and OpenAI API",
+    techStack: ["Typescript", "Next.js", "OAuth", "Firebase", "OpenAI API"],
+    image: "/projects/project-chatgpt.png",
+    isImageDark: true,
+    github: "https://github.com/vasylmiskiv/chatgpt-messenger",
+    link: "https://vmiskivchatgpt-messenger.vercel.app",
+  },
+  {
+    name: "Realtime Chat with Socket.io",
+    description: "Fullstack web chat with separate, unique rooms and users",
+    techStack: ["Typescript", "React", "Redux", "Express", "SocketIO"],
+    image: "/projects/project-realtime-chat.png",
+    isImageDark: true,
+    github: "https://github.com/vasylmiskiv/fullstack-chat-socketio",
+    link: "https://vmiskivchatsocketio.onrender.com/",
+  },
+  {
+    name: "MVP GraphQL Project management app",
+    description: "GraphQL fullstack application with MERN Stack",
+    techStack: [
+      "Typescript",
+      "React",
+      "GraphqQL",
+      "Express",
+      "Mongoose",
+      "MongoDB",
+    ],
+    image: "/projects/project-mvpmanagement.png",
+    isImageDark: true,
+    github: "https://github.com/vasylmiskiv/projectmngmnt-apollo-graphql",
+    link: "https://vmiskivgraphqlprojects.onrender.com/",
+  },
+];

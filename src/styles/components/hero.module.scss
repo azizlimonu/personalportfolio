@@ -1,0 +1,107 @@
+@use "../variables" as *;
+
+.hero {
+  background-color: inherit;
+  display: flex;
+  width: 100%;
+  height: 680px;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1500px;
+  &_description {
+    padding-top: 3rem;
+    .header {
+      font-size: 7.5rem;
+    }
+    .subheader {
+      font-size: 2.5rem;
+    }
+    .description {
+      width: 70%;
+      word-break: keep-all;
+      font-size: 1.5rem;
+      text-align: justify;
+      line-height: 1.5;
+    }
+    .resume {
+      margin-top: 2rem;
+      border: none;
+      color: inherit;
+      cursor: pointer;
+      align-items: center;
+      background-color: #231d3c;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px hsla(0, 0%, 42%, 0.2);
+      color: #fbfaff;
+      display: flex;
+      flex-flow: row nowrap;
+      font-size: 1.125rem;
+      justify-content: center;
+      padding: 1rem 2rem;
+      gap: 0.5rem;
+      width: 230px;
+
+      svg {
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .toolbar {
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      font-size: 2rem;
+    }
+  }
+  &_image {
+    img {
+      border-radius: 30px;
+      margin-top: 3rem;
+    }
+  }
+}
+
+.dark {
+  background-color: $navy-lightest;
+  color: $light-slate;
+  .hero {
+    &_description {
+      .subheader {
+        color: rgb(205, 196, 181);
+      }
+      .header {
+        color: rgb(245, 237, 229);
+      }
+      .description {
+        color: rgb(205, 196, 181);
+      }
+      .resume {
+        color: rgb(254, 239, 255);
+        background-color: $indigo-500;
+      }
+    }
+  }
+}
+
+.light {
+  background-color: $dark-900;
+  color: $dark-000;
+  .hero {
+    &_description {
+      .subheader {
+        color: $text-color-primary;
+      }
+      .header {
+        color: $text-color-emphasis;
+      }
+      .description {
+        color: $text-color-primary;
+      }
+      .resume {
+        color: $text-color-button;
+      }
+    }
+  }
+}
