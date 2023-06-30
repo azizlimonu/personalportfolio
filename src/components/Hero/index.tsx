@@ -36,13 +36,13 @@ const Hero = () => {
           </button>
 
           <div className={styles.toolbar}>
-            <Link href="www.linkedin.com">
+            <Link href="https://www.linkedin.com">
               <FaLinkedin />
             </Link>
-            <Link href="www.linkedin.com">
+            <Link href="https://www.linkedin.com">
               <BiLogoGithub />
             </Link>
-            <Link href="www.linkedin.com">
+            <Link href="https://www.linkedin.com">
               <GrInstagram />
             </Link>
           </div>

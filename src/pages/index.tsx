@@ -7,6 +7,9 @@ import useTheme from '@/hooks/useTheme'
 import Header from '@/components/Layout/Header'
 import styles from '@/styles/pages/home.module.scss'
 import Hero from '@/components/Hero'
+import Projects from '@/components/Projects'
+import Skills from '@/components/Skills'
+import Contact from '@/components/contact'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +26,9 @@ export default function Home() {
       />
       <Header />
       <Hero />
+      <Projects />
+      <Skills />
+      <Contact />
       <div className={`${theme} background`}>
         <div className='background'>
           <h1 className='text'>Hello World</h1>

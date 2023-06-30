@@ -1,0 +1,23 @@
+@use "../variables" as *;
+
+.skills {
+  background-color: inherit;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1500px;
+  
+}
+
+.dark {
+  background-color: $navy-lightest;
+  color: $light-slate;
+ 
+}
+
+.light {
+  background-color: $dark-900;
+  color: $dark-000;
+ 
+}

@@ -13,7 +13,6 @@ interface IProjectItem {
   description: string;
   techStack: string[];
   image: string;
-  isImageDark: boolean;
   github: string;
   link: string;
 }

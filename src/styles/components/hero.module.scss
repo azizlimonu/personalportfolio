@@ -53,6 +53,9 @@
       flex-direction: row;
       gap: 1rem;
       font-size: 2rem;
+      svg:hover{
+        color: $blue-700;
+      }
     }
   }
   &_image {
