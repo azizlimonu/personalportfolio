@@ -3,7 +3,7 @@ import useScrollNavbar from '@/hooks/useScrollNavbar';
 import useTheme from '@/hooks/useTheme';
 import styles from '@/styles/components/header.module.scss';
 import { NAV_ITEMS } from '@/data/constant';
-import { Link } from "react-scroll/modules";
+import { Link } from "react-scroll";
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import ThemeContext from '@/context/ThemeContext';
 
@@ -18,7 +18,14 @@ const Header = () => {
     >
       <div className={styles.container}>
         <div className={styles.logo}>
-          <h1>AL</h1>
+          <Link
+            to="hero"
+            spy={true}
+            smooth={true}
+            className={styles.logo_link}
+          >
+            AL
+          </Link>
         </div>
 
         <nav className={styles.nav}>

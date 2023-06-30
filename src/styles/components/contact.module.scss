@@ -1,0 +1,29 @@
+@use "../variables" as *;
+
+.dark {
+  background-color: $navy-lightest;
+  color: $light-slate;
+}
+
+.light {
+  background-color: $dark-900;
+  color: $dark-000;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 750px;
+    .desc {
+    }
+    .form {
+    }
+  }
+}
