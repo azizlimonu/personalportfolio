@@ -15,7 +15,7 @@ const Projects = () => {
         <h1 className={styles.title}>PROJECTS</h1>
         <div className={styles.container}>
           {PROJECTS?.map((project, idx) => (
-            <>
+            <React.Fragment key={idx}>
               <div key={idx} className={styles.card}>
                 <div className={styles.image}>
                   <Image
@@ -46,9 +46,9 @@ const Projects = () => {
                 </div>
               </div>
               {PROJECTS[PROJECTS.length - 1] !== project && (
-                <hr className={styles.line} key={idx} />
+                <hr className={styles.line} key={project.name} />
               )}
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>

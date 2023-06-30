@@ -1,23 +1,74 @@
 @use "../variables" as *;
 
+.title {
+  padding: 1rem 1rem 2.5rem 1rem;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
 .skills {
   background-color: inherit;
-  display: flex;
   width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
   max-width: 1500px;
-  
+  height: 650px;
+  &_category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      background-color: inherit;
+      color: inherit;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom-width: medium;
+      padding: 0rem 2rem 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: $light-slate;
+      &:hover {
+        color: $blue-400;
+        font-weight: bold;
+      }
+      &.active {
+        color: $blue-400;
+        border-bottom-color: $blue-400;
+        font-weight: 600;
+      }
+    }
+  }
+  &_set {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px 0;
+    margin: 2rem 21rem;
+    min-width: 600px;
+    max-width: 680px;
+    &_item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      cursor: pointer;
+    }
+  }
 }
 
 .dark {
   background-color: $navy-lightest;
   color: $light-slate;
- 
 }
 
 .light {
   background-color: $dark-900;
   color: $dark-000;
- 
+  button {
+    color: $dark-400;
+    &:hover {
+      color: $blue-400;
+    }
+  }
 }

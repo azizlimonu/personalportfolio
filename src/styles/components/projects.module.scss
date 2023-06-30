@@ -46,11 +46,11 @@
         }
       }
       .description {
+        padding: 1rem 0;
         display: flex;
         flex-direction: column;
         position: relative;
         width: 100%;
-        padding-left: 3rem;
         z-index: 1;
         h3 {
           font-size: 2rem;
