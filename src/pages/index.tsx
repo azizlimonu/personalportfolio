@@ -10,6 +10,7 @@ import Hero from '@/components/Hero'
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import Contact from '@/components/contact';
+import Footer from '@/components/Layout/Footer'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -30,12 +31,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Contact />
-      <div className={`${theme} background`}>
-        <div className='background'>
-          <h1 className='text'>Hello World</h1>
-          <button onClick={toggleDark}>Switch Theme</button>
-        </div>
-      </div>
+      <Footer/>
     </>
   )
 }

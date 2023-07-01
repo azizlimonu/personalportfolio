@@ -1,0 +1,49 @@
+@use "../variables" as *;
+
+.dark {
+  background-color: #011231;
+  color: $light-slate;
+  .wrapper {
+    // box-shadow: 0 10px 30px -10px $indigo-900;
+  }
+}
+
+.light {
+  background-color: #d0d0d0;
+  color: $dark-000;
+  .wrapper {
+    // box-shadow: 0 10px 30px -10px $indigo-100;
+  }
+}
+
+.active {
+  color: $blue-700;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  .icon {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 1.3rem;
+    align-items: center;
+    justify-content: center;
+    a {
+      display: inline-block;
+      transition: transform 0.3s, fill 0.3s;
+      svg:hover {
+        transform: scale(1.1);
+        fill: #ff0000;
+      }
+    }
+  }
+  a {
+    text-decoration: inherit;
+  }
+}
