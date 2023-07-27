@@ -15,6 +15,10 @@ interface IProjectItem {
   image: string;
   github: string;
   link: string;
+  images: string[];
+  slug: string;
+  features:string[];
+  library:string[];
 }
 
 interface ISlideUpProps {

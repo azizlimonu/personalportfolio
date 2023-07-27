@@ -26,8 +26,12 @@ const Projects = () => {
                   />
                 </div>
                 <div className={styles.description}>
-                  <h3>{project.name}</h3>
+                  <Link href={`/project/${project.slug}`}>
+                    <h3>{project.name}</h3>
+                  </Link>
+
                   <p>{project.description}</p>
+
                   <div className={styles.tags}>
                     {project.techStack.map((tag, idx) => (
                       <div className={styles.tags_item} key={idx}>
@@ -35,6 +39,7 @@ const Projects = () => {
                       </div>
                     ))}
                   </div>
+
                   <div className={styles.toolbar}>
                     <Link href={project.github}>
                       <BsGithub size={28} />
@@ -45,6 +50,7 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
+              
               {PROJECTS[PROJECTS.length - 1] !== project && (
                 <hr className={styles.line} key={project.name} />
               )}
