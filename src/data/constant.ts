@@ -59,10 +59,15 @@ export const PROJECTS: Array<IProjectItem> = [
       "Supabase",
       "PostgreeSQL",
     ],
-    image: "/images/landing.png",
+    image: "/images/spotify/spotify1.jpg",
     github: "https://github.com/azizlimonu/spotifyclone",
     link: "https://nextspotifyclone.vercel.app/",
-    images: [""],
+    images: [
+      "/images/spotify/spotify1.jpg",
+      "/images/spotify/spotify2.jpg",
+      "/images/spotify/spotify3.jpg",
+      "/images/spotify/spotify4.jpg",
+    ],
     slug: 'spotify-clone',
     features: [
       "Song Upload & Audio Playback",
