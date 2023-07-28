@@ -18,7 +18,6 @@ interface IProjectItem {
   images: string[];
   slug: string;
   features:string[];
-  library:string[];
 }
 
 interface ISlideUpProps {

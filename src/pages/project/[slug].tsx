@@ -1,4 +1,5 @@
 "use client";
+
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -41,14 +42,23 @@ export default function ProjectPage() {
 
   console.log(project);
 
-  if (!project) return (
+  if (!project && !isLoading) return (
     <>
-      <Header />
-      <div style={{ minHeight: '90vh', minWidth: '100%' }}>
+      <div style={{ minHeight: '90vh', minWidth: '100%', display: "flex", alignItems: "center" }}>
+        <p>Loading...</p>
       </div>
       <Footer />
     </>
   );
+
+  if (!project) return (
+    <>
+      <div style={{ minHeight: '90vh', minWidth: '100%', display: "flex", alignItems: "center", justifyContent: 'center' }}>
+        <p>Project Not Found</p>
+      </div>
+      <Footer />
+    </>
+  )
 
   return (
     <>

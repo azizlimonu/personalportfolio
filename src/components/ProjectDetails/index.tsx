@@ -4,6 +4,8 @@ import Footer from '../Layout/Footer'
 import useTheme from '@/hooks/useTheme'
 import styles from '../../styles/pages/jobdetails.module.scss'
 import Slider from '../slider'
+import Link from 'next/link'
+import { IoMdArrowRoundBack } from 'react-icons/io'
 
 interface Props {
   project: IProjectItem,
@@ -15,7 +17,6 @@ const ProjectDetails = ({ project, loading }: Props) => {
 
   return (
     <>
-      <Header />
       <div
         className={`${styles[theme]}`}
         style={{ minHeight: "100vh", minWidth: "100%" }}
@@ -24,6 +25,9 @@ const ProjectDetails = ({ project, loading }: Props) => {
           <p>Loading...</p>
         ) : (
           <div className={styles.project}>
+            <Link href='/' className={styles.project_back}>
+              <IoMdArrowRoundBack /> Back To Home
+            </Link>
             <h1 className={styles.project_name}>
               {project.name}
             </h1>
@@ -39,7 +43,7 @@ const ProjectDetails = ({ project, loading }: Props) => {
               </div>
             </div>
 
-            <div className={styles.project_libs}>
+            {/* <div className={styles.project_libs}>
               <h2>Libraries & Technologies</h2>
               <div className={styles.project_libs_lib}>
                 {project.library?.map((lib, idx) => (
@@ -49,7 +53,7 @@ const ProjectDetails = ({ project, loading }: Props) => {
                   </p>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             <div className={styles.project_feats}>
               <h2>Features Of The Project</h2>
