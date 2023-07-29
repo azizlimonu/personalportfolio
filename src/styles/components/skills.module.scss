@@ -1,9 +1,18 @@
-@use "../variables" as *;
+@import "../variables";
+@import "../mixins";
 
 .title {
   padding: 1rem 1rem 2.5rem 1rem;
   font-weight: 600;
   font-size: 3rem;
+  h1 {
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include mobile {
+      font-size: 1.8rem;
+    }
+  }
 }
 
 .skills {
@@ -11,6 +20,15 @@
   width: 100%;
   max-width: 1500px;
   height: 650px;
+
+  @include tablet {
+    max-width: 1023px;
+  }
+
+  @include mobile {
+    max-width: 767px;
+  }
+
   &_category {
     display: flex;
     flex-direction: row;
@@ -28,6 +46,18 @@
       font-size: 1.2rem;
       cursor: pointer;
       color: $light-slate;
+
+      @include tablet {
+        padding: 0rem 1.5rem 1rem;
+        font-size: 1rem;
+        height: 48px;
+      }
+      @include mobile {
+        padding: 0rem 0.8rem 1rem;
+        height: 48px;
+        font-size: 0.8rem;
+      }
+
       &:hover {
         color: $blue-400;
         font-weight: bold;
@@ -39,20 +69,40 @@
       }
     }
   }
-  &_set {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px 0;
-    margin: 2rem 21rem;
-    min-width: 600px;
-    max-width: 680px;
-    &_item {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1rem;
-      cursor: pointer;
+  &_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_set {
+      // display: grid;
+      // grid-template-columns: repeat(3, minmax(0, 1fr));
+      // grid-gap: 20px;
+      // column-gap: 7rem;
+      // padding-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 20px;
+      grid-column-gap: 7rem;
+      justify-content: center; /* Center horizontally */
+      align-content: center; /* Center vertically */
+      padding-top: 2rem;
+
+      @include tablet {
+        column-gap: 4rem;
+      }
+
+      @include mobile {
+        column-gap: 2rem;
+      }
+      &_item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        cursor: pointer;
+        align-items: center;
+      }
     }
   }
 }

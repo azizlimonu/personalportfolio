@@ -1,4 +1,5 @@
-@use "../variables" as *;
+@import "../variables";
+@import "../mixins";
 
 .dark {
   background-color: $navy-lightest;
@@ -16,6 +17,13 @@
   gap: 1rem;
   padding: 1rem 5rem 2rem 5rem;
 
+  @include mobile {
+    padding: 1rem 2rem 2rem;
+  }
+  @include tablet {
+    padding: 1rem 2rem 2rem;
+  }
+
   &_back {
     display: flex;
     flex-direction: row;
@@ -28,12 +36,29 @@
   &_name {
     padding-top: 2rem;
     padding-bottom: 1rem;
+    @include tablet {
+      padding-top: 0.5rem;
+      padding-bottom: 0;
+    }
+
+    @include mobile {
+      padding-top: 0.5rem;
+      padding-bottom: 0;
+    }
   }
 
   &_tags {
     display: flex;
     flex-direction: column;
     width: 50%;
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
     h2 {
       padding: 1rem 0;
     }
@@ -71,9 +96,8 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      p {
-        font-size: 1.3rem;
-        span {
+      ul {
+        li {
           font-size: 1.3rem;
         }
       }

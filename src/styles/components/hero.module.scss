@@ -1,4 +1,5 @@
-@use "../variables" as *;
+@import "../variables";
+@import "../mixins";
 
 .hero {
   background-color: inherit;
@@ -8,13 +9,68 @@
   flex-direction: row;
   justify-content: space-between;
   max-width: 1500px;
+  gap: 2rem;
+  @include tablet {
+    height: 550px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: normal;
+    gap: 0;
+    align-items: center;
+  }
+  @include mobile {
+    height: 450px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: normal;
+    gap: 0;
+    align-items: center;
+    padding-top: 2rem;
+  }
+
   &_description {
     padding-top: 3rem;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: normal;
+      flex-direction: column;
+      padding: 0;
+    }
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: normal;
+      flex-direction: column;
+      padding-top: 0;
+    }
     .header {
       font-size: 7.5rem;
+      @include desktop {
+        display: flex;
+        align-items: center;
+        font-size: 6rem;
+      }
+      @include tablet {
+        font-size: 4rem;
+      }
+      @include mobile {
+        text-align: center;
+        font-size: 2.3rem;
+      }
     }
     .subheader {
       font-size: 2.5rem;
+      @include desktop {
+        font-size: 2rem;
+      }
+      @include tablet {
+        font-size: 1.2rem;
+      }
+      @include mobile {
+        font-size: 1rem;
+        text-align: center;
+      }
     }
     .description {
       width: 70%;
@@ -22,6 +78,23 @@
       font-size: 1.5rem;
       text-align: justify;
       line-height: 1.5;
+      @include desktop {
+        font-size: 1rem;
+      }
+      @include tablet {
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+      @include mobile {
+        font-size: 0.6rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 0 2rem;
+      }
     }
     .resume {
       margin-top: 2rem;
@@ -41,10 +114,30 @@
       gap: 0.5rem;
       width: 230px;
 
+      @include tablet {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        width: 150px;
+        font-size: 0.7rem;
+      }
+      @include mobile {
+        margin-top: 1rem;
+        padding: 0.2rem 0.6rem;
+        width: 100px;
+        font-size: 0.5rem;
+      }
+
       svg {
         font-size: 1.5rem;
         padding: 0;
         margin: 0;
+
+        @include tablet {
+          font-size: 1rem;
+        }
+        @include mobile {
+          font-size: 0.5rem;
+        }
       }
     }
     .toolbar {
@@ -53,8 +146,19 @@
       flex-direction: row;
       gap: 1rem;
       font-size: 2rem;
-      svg:hover{
+      svg:hover {
         color: $blue-700;
+      }
+      @include tablet {
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+      @include mobile {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+      }
+      @include desktop-wide {
+        margin-top: 10rem;
       }
     }
   }
@@ -62,6 +166,23 @@
     img {
       border-radius: 30px;
       margin-top: 3rem;
+
+      @include desktop {
+        height: 410px;
+        width: 350px;
+      }
+      @include tablet {
+        margin-top: 1rem;
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+      }
+      @include mobile {
+        margin-top: 1rem;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+      }
     }
   }
 }

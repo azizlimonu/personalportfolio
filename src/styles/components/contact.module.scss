@@ -1,4 +1,5 @@
-@use "../variables" as *;
+@import "../variables";
+@import "../mixins";
 
 .dark {
   background-color: $navy-lightest;
@@ -21,6 +22,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include tablet {
+      padding: 1rem;
+    }
+    @include mobile {
+      padding: 1rem;
+    }
+
+    h1{
+      @include tablet{
+        font-size: 2rem;
+      }
+      @include mobile{
+        font-size: 1.8rem;
+      }
+    }
   }
   .container {
     display: flex;
@@ -28,9 +45,26 @@
     justify-content: center;
     width: 100%;
     margin-bottom: 3rem;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+
     // height: 750px;
     .desc {
       max-width: 700px;
+
+      @include tablet {
+        display: none;
+      }
+
+      @include mobile {
+        display: none;
+      }
     }
     .form {
       max-width: 600px;

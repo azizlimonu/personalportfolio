@@ -1,4 +1,5 @@
-@use "../variables" as *;
+@import "../variables";
+@import "../mixins";
 
 .wrapper {
   padding: 2rem;
@@ -14,6 +15,15 @@
       display: flex;
       flex-direction: row;
       gap: 1rem;
+
+      @include tablet {
+        flex-direction: column;
+      }
+
+      @include mobile {
+        flex-direction: column;
+      }
+
       .field {
         display: flex;
         flex-direction: column;

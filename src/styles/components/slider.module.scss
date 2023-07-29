@@ -1,4 +1,5 @@
 .slider {
+  padding-top: 25px;
   &__title {
     font-weight: 600;
     font-size: 40px;
@@ -11,20 +12,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // height: 760px;
+    height: 760px;
     &-img {
       border-radius: 40px;
-      cursor: grab;
+          cursor: grab;
       transition: all 0.2s ease-in-out;
       &:active {
         cursor: grabbing;
       }
     }
   }
-}
-
-.slider__pagination-bullet {
-  margin-bottom: 50px; /* Adjust the margin value as needed */
 }
 
 @media (max-width: 1440px) {

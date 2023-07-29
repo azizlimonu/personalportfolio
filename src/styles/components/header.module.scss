@@ -1,11 +1,12 @@
-@use "../variables" as *;
+@import "../variables";
+@import "../mixins";
 
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 70px;
+  // max-height: 70px;
   z-index: 9;
   transition: transform 0.1s ease-out;
   transform: translateY(0);
@@ -13,6 +14,14 @@
   backdrop-filter: blur(18px);
   background-color: inherit;
   -webkit-backdrop-filter: blur(18px);
+
+  @include tablet {
+    height: auto;
+  }
+
+  @include mobile {
+    height: auto;
+  }
 }
 
 .visible {
@@ -34,6 +43,37 @@
   justify-content: space-between;
   padding: 0 4rem;
 
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menubar {
+    display: none;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: transparent;
+
+      svg {
+        font-size: 1.8rem;
+      }
+    }
+    @include tablet {
+      display: block;
+    }
+    @include mobile {
+      display: block;
+    }
+  }
+
   .logo {
     font-size: 1.8rem;
     cursor: pointer;
@@ -41,6 +81,13 @@
     align-items: center;
     font-weight: 700;
     justify-content: center;
+
+    @include tablet {
+      justify-content: space-between;
+    }
+    @include mobile {
+      justify-content: space-between;
+    }
   }
 
   .nav {
@@ -48,15 +95,41 @@
     flex-direction: row;
     gap: 1rem;
     align-items: center;
-    .link {
-      list-style-type: none;
+
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: none;
+    }
+
+    &.shownav {
+      // show nav in mobile screen when its toggled
+      display: block !important;
+      height: 100vh;
+      .nav_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+    &_wrapper {
       display: flex;
       flex-direction: row;
       gap: 2rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-      &:hover {
-        color: $blue-700;
+      align-items: center;
+
+      .link {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        &:hover {
+          color: $blue-700;
+        }
       }
     }
   }
@@ -73,13 +146,37 @@
 .dark {
   // background-color: $navy-lightest;
   color: $light-slate;
+  .container {
+    .logo {
+      .menubar {
+        button {
+          // background-color: $navy-lightest;
+          svg {
+            color: $light-slate;
+          }
+        }
+      }
+    }
+  }
 }
 
 .light {
-  // background-color: $dark-900;
   color: $dark-000;
+  .container {
+    .menubar {
+      button {
+        // background-color: $dark-900;
+        svg {
+          color: $dark-000;
+        }
+      }
+    }
+  }
+  // background-color: $dark-900;
 }
 
-.active{
+.active {
   color: $blue-700;
 }
+
+// Media Query

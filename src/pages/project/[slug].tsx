@@ -1,5 +1,3 @@
-"use client";
-
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -9,7 +7,17 @@ import Header from '@/components/Layout/Header';
 import Footer from '@/components/Layout/Footer';
 
 export default function ProjectPage() {
-  const [project, setProject] = useState<IProjectItem | null>(null);
+  const [project, setProject] = useState<IProjectItem | null>({
+    name: "",
+    description: "",
+    techStack: [""],
+    image: "",
+    github: "",
+    link: "",
+    images: [""],
+    slug: "",
+    features: [""],
+  });
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const router = useRouter();
@@ -39,8 +47,6 @@ export default function ProjectPage() {
       fetchData();
     }
   }, [router.isReady, slug]);
-
-  console.log(project);
 
   if (!project && !isLoading) return (
     <>

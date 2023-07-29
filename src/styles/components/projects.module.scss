@@ -1,4 +1,5 @@
-@use "../variables" as *;
+@import "../variables";
+@import "../mixins";
 
 .projects {
   background-color: inherit;
@@ -7,10 +8,34 @@
   flex-direction: column;
   max-width: 1500px;
   align-items: center;
+
+  @include mobile {
+    max-width: 767px;
+  }
+
+  @include tablet {
+    max-width: 1023px;
+  }
+
+  @include desktop {
+    max-width: 1459px;
+  }
+
+  @include desktop-wide {
+  }
+
   .title {
     padding: 1rem 1rem 2.5rem 1rem;
     font-weight: 600;
     font-size: 3rem;
+    @include mobile {
+      font-size: 2rem;
+      padding: 0 1rem 1rem 1rem;
+    }
+    @include tablet {
+      font-size: 2rem;
+      padding: 0 1rem 1rem 1rem;
+    }
   }
   .container {
     display: flex;
@@ -19,6 +44,21 @@
     gap: 4rem;
     margin-bottom: 3rem;
     margin: 0 4rem 3rem 4rem;
+
+    @include desktop {
+      margin: 0 0 3rem;
+    }
+
+    @include tablet {
+      margin: 0 0 3rem;
+      gap: 1rem;
+    }
+
+    @include mobile {
+      margin: 0 0 3rem;
+      gap: 1rem;
+    }
+
     .line {
       height: 2px;
       margin: 0;
@@ -26,6 +66,15 @@
     .card {
       display: flex;
       flex-direction: row;
+
+      @include tablet {
+        flex-direction: column;
+      }
+
+      @include mobile {
+        flex-direction: column;
+      }
+
       .image {
         overflow: hidden;
         width: 100%;
@@ -43,6 +92,18 @@
           border-radius: 20px;
           display: block;
           box-shadow: 2px 3px 10px $indigo-300;
+
+          @include desktop {
+            max-width: 370px;
+            max-height: 250px;
+            border-radius: 10px;
+          }
+
+          @include mobile {
+            max-width: 300px;
+            max-height: 180px;
+            border-radius: 10px;
+          }
         }
       }
       .description {
@@ -52,26 +113,62 @@
         position: relative;
         width: 100%;
         z-index: 1;
+
+        @include tablet {
+          align-items: center;
+        }
+        @include mobile {
+          align-items: center;
+        }
+
         h3 {
           font-size: 2rem;
           cursor: pointer;
           &:hover {
             color: $blue-400;
           }
+
+          @include mobile {
+            font-size: 1.5rem;
+          }
         }
         p {
           margin: 1rem 0;
+          @include mobile {
+            text-align: center;
+            font-size: 0.8rem;
+          }
+          @include tablet {
+            text-align: center;
+          }
         }
         .tags {
           display: flex;
           flex-wrap: wrap;
           gap: 1rem;
           margin-bottom: 1rem;
+
+          @include tablet {
+            margin-bottom: 3rem;
+            align-items: center;
+            justify-content: center;
+          }
+          @include mobile {
+            margin-bottom: 3rem;
+            align-items: center;
+            justify-content: center;
+          }
+
           &_item {
             background-color: $dark-800;
             color: $dark-100;
             padding: 0.5rem 1rem;
             border-radius: 20px;
+
+            @include mobile {
+              font-size: 0.6rem;
+              padding: 0.4rem 0.9rem;
+            }
           }
         }
         .toolbar {
@@ -81,6 +178,14 @@
           position: absolute;
           bottom: 0;
           right: 0;
+
+          @include tablet {
+            position: unset;
+          }
+          @include mobile {
+            position: unset;
+          }
+
           svg {
             color: $dark-500;
           }

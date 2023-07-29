@@ -58,12 +58,13 @@ const ProjectDetails = ({ project, loading }: Props) => {
             <div className={styles.project_feats}>
               <h2>Features Of The Project</h2>
               <div className={styles.project_feats_feat}>
-                {project.features?.map((feat, idx) => (
-                  <p key={idx}>
-                    <span>{idx + 1}.{" "}</span>
-                    {feat}
-                  </p>
-                ))}
+                <ul>
+                  {project.features?.map((feat, idx) => (
+                    <li key={idx}>
+                      {feat}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

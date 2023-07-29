@@ -36,7 +36,7 @@ const Slider = ({ images }: Props) => {
                     src={img}
                     alt={`images_${idx}`}
                     width={1300}
-                    height={560}
+                    height={660}
                     className={styles['slider__item-img']}
                     priority
                   />

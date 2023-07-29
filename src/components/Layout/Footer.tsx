@@ -16,10 +16,10 @@ const Footer = () => {
           <Link href="https://www.linkedin.com">
             <FaLinkedin />
           </Link>
-          <Link href="https://www.linkedin.com">
+          <Link href="https://www.github.com/azizlimonu">
             <BiLogoGithub />
           </Link>
-          <Link href="https://www.linkedin.com">
+          <Link href="https://www.instagram.com/azizlimonu">
             <GrInstagram />
           </Link>
         </div>

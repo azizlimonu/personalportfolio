@@ -1,19 +1,14 @@
-@use "../variables" as *;
+@import "../variables";
+@import "../mixins";
 
 .dark {
   background-color: #011231;
   color: $light-slate;
-  .wrapper {
-    // box-shadow: 0 10px 30px -10px $indigo-900;
-  }
 }
 
 .light {
   background-color: #d0d0d0;
   color: $dark-000;
-  .wrapper {
-    // box-shadow: 0 10px 30px -10px $indigo-100;
-  }
 }
 
 .active {
@@ -27,6 +22,16 @@
   padding: 1rem;
   width: 100%;
   justify-content: space-between;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
   .icon {
     display: flex;
     flex-direction: row;
@@ -34,6 +39,7 @@
     font-size: 1.3rem;
     align-items: center;
     justify-content: center;
+
     a {
       display: inline-block;
       transition: transform 0.3s, fill 0.3s;

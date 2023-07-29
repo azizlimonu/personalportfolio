@@ -11,7 +11,7 @@ import Link from 'next/link';
 const heroData = {
   intro: "Hello, my name is",
   name: "Aziz Limonu",
-  description: "a passionate web developer who believes in pushing boundaries and creating extraordinary experiences. With a blend of artistic vision and technical expertise, I bring ideas to life through my portfolio projects. Get ready to explore a world where imagination knows no limits.",
+  description: "a Fullstack Developer fueled by Tech Enthusiasm and a Lifelong Learning Journey",
 }
 
 const Hero = () => {
